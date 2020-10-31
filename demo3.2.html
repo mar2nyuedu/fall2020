@@ -9,6 +9,21 @@
     This is demo 3.2 about object
 </body>
 <script>
-    
+    var person = {"id":2, "name":"john","age":40}
+/*
+    for(var x in person){
+        console.log(x)
+        console.log(person[x])
+
+    }
+*/
+    person.print = function(){
+        console.log("the id is: " + this.id)
+        console.log("the name is: " + this.name)
+        console.log("the age is: " + this.age)
+    }
+
+    person.print()
+
 </script>
 </html>
