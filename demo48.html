@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo 4.8</title>
+</head>
+<body>
+    This is demo 4.8 about Radio Button Validation</br>
+    Expert<input type="radio" id = "5" name="Skill" value="E" /> Beginner <input type="radio" name="Skill" id = "6" value="B" /> Intermediate <input type="radio" name ="Skill" id="7" /> </br>
+    <input type="button" id = "8" value="Validate" />
+</body>
+<script>
+    function myClickHandlder(event){
+        var myArray=document.getElementsByName("Skill")
+        var isSelected = false;
+        for (var i = 0; i<myArray.length; i = i +1){
+            var myValue = myArray[i].checked;
+            if (myValue){
+                isSelected=true;
+                break;
+            }            
+        }
+
+        if (isSelected===false){
+            window.alert("No Skill is selected");
+        }
+
+    }
+
+    var myButton = document.getElementById("8");
+    myButton.addEventListener("click", myClickHandlder);
+</script>
+</html>

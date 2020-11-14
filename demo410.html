@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo 4.10</title>
+</head>
+<body>
+    <div id="myDiv"></div>
+    This is demo 4.10 about DIV</br>
+    Enter First Name <input id="1" type="text" value = ""> </br>
+    <input id="2" type="button" value="OK">
+</body>
+<script>
+
+    function myClickHandler(event){
+        var myTextBox = document.getElementById("1")
+        var myValue = myTextBox.value
+        if(myValue.trim() === ""){
+            var div1 = document.getElementById("myDiv");
+            div1.innerHTML= "you forgot to enter first name"
+            div1.style.color = 'RED';
+            div1.style.visibility = 'visible';
+        }
+        else{
+            var div1 = document.getElementById("myDiv");
+            div1.innerHTML = ""
+        }
+    }
+    var myButton = document.getElementById("2")
+    myButton.addEventListener("click", myClickHandler)
+    </script>
+</html>

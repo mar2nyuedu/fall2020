@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo 4.5</title>
+</head>
+<body>
+    This is demo 4.5 about TextBox Validation</br>
+    Enter First Name <input id="1" type="text" value = ""> </br>
+    <input id="2" type="button" value="OK">
+</body>
+<script>
+
+    function myClickHandler(event){
+        var myTextBox = document.getElementById("1")
+        var myValue = myTextBox.value
+        if(myValue.trim() === ""){
+            window.alert("you forgot to enter first name")
+        }
+    }
+    var myButton = document.getElementById("2")
+    myButton.addEventListener("click", myClickHandler)
+    </script>
+</html>

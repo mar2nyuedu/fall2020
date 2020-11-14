@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo 4.7</title>
+</head>
+<body>
+    This is demo 4.7 about Checkbox Validation</br>
+    Do you have an email? <input id="3" type="checkbox" /></br>
+    <input id = "4" type="button" value="Validate" />
+
+</body>
+<script>
+    function myClickHandler(event){
+        var myCheckBox = document.getElementById("3");
+        var myCheck = myCheckBox.checked;
+        if (!myCheck){
+            window.alert("You forgot to check the checkbox")
+        }
+    }
+
+
+    var myButton = document.getElementById("4");
+    myButton.addEventListener("click", myClickHandler);
+</script>
+</html>

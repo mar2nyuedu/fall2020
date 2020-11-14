@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo 4.9</title>
+</head>
+<body>
+    This is demo 4.9 about Dropdown Validation</br>
+    <select id="cars" name="myCars">
+        <option id="n" value="n" name="n">Select one from below</option>
+        <option id="v" value="volvo" name = "Volve">VOLVO</option>
+        <option id = "s" value="saab" name="Saab" >SAAB</option>
+        <option id="f" value="fiat" name="Fiat" >FIAT </option>
+        <option id = "a" value="audi" name="Audi" >AUDI</option>
+    </select> </br> 
+    <input type="button" id="validate" value="Validate"> 
+</body>
+<script>
+    function myClickHandler(event){
+        var mySelect = document.getElementById("cars");
+        var myOptions = mySelect.options;
+        if (myOptions[0].selected){
+            window.alert("You didn't select a car type");
+            return;
+        }
+        for (var i = 1; i<myOptions.length; i= i +1){
+            if (myOptions[i].selected){
+                window.alert("You selected " + myOptions[i].text)
+                break;
+            }
+        }        
+    }
+
+    var myButton = document.getElementById("validate");
+    myButton.addEventListener("click", myClickHandler);
+
+</script>
+</html>

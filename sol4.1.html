@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sol 4.1</title>
+</head>
+<body>
+    This is sol 4.1 about array</br>
+</body>
+<script>
+    function sum(myArray){
+        var total = 0
+        for(var i=0; i<myArray.length; i = i +1){
+            total = total + myArray[i];
+        }
+        return total
+    }
+
+    var numArray = [10,20,30,40,50]
+    var t = sum(numArray)
+    console.log(t); // 150
+
+    var numArray2 = [1, 2, 3, 4, 5]
+    var t2 = sum(numArray2)
+    console.log(t2) //15
+
+    var numArray3 = [1, 2, "last", 4, 5]
+    var t3 = sum(numArray3)
+    console.log(t3) 
+
+
+</script>
+</html>
